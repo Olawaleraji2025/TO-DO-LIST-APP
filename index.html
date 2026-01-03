@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskForge - Shape Your Productivity</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> 
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/task-item.js"></script> -->
+  </head>
+  <body class="page-bg">
+    <custom-navbar></custom-navbar>
+
+    <main class="main-container">
+      <div class="task-card">
+        <!-- Header -->
+        <div class="header">
+          <h1>TaskForge</h1>
+          <p>Shape Your Productivity</p>
+        </div>
+
+        <!-- Add Task Form -->
+        <div class="form-container">
+          <form id="addTaskForm" class="add-form">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="What needs to be done?"
+              class="task-input"
+            />
+            <select id="taskPriority" class="priority-select">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+            <select id="taskCategory" class="category-select">
+              <option value="work">Work</option>
+              <option value="personal" selected>Personal</option>
+              <option value="shopping">Shopping</option>
+              <option value="other">Other</option>
+            </select>
+            <button type="submit" class="add-btn" id="taskAddBtn">
+              <i data-feather="plus"></i> Add
+            </button>
+          </form>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+          <div class="filter-buttons">
+            <button data-filter="all" class="filter-btn active">All</button>
+            <button data-filter="active" class="filter-btn">Active</button>
+            <button data-filter="completed" class="filter-btn">
+              Completed
+            </button>
+          </div>
+          <div class="task-count">
+            <span id="taskCount">0</span> tasks remaining
+          </div>
+        </div>
+
+        <!-- Task List -->
+        <div id="taskList" class="task-list">
+          <!-- Tasks will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state">
+          <i data-feather="check-circle" class="empty-icon"></i>
+          <p class="empty-text">No tasks found. Add one above!</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="myscript.js"></script>
+    <!-- <script src="main.js"></script> -->
+  </body>
+</html>

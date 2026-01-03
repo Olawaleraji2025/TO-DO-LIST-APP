@@ -224,6 +224,13 @@
 }
 
 /* Task Text */
+.tasks-text-container{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
 .task-text {
   flex: 1;
   font-size: 1rem;
@@ -292,6 +299,14 @@
 }
 
 /* Button Styling */
+.edit-container{
+  display: flex;
+  gap: 5px;
+  /* margin: 8px auto; */
+  margin-left: auto;
+}
+
+
 .edit-btn, .delete-btn {
   padding: 0.5rem 1rem;
   border: none;
@@ -427,11 +442,9 @@
 
   /* Task Item Responsiveness */
 
-.edit-container{
-  display: flex;
-  gap: 5px;
-  margin: 8px auto;
-}
+  .edit-container{
+    margin: 8px auto;
+  }
 
 
   .task-item {
@@ -484,5 +497,22 @@
   .filter-btn {
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
+  }
+
+  .edit-container{
+    display: flex;
+    gap: 5px;
+    margin: 8px auto;
+  }
+
+  .edit-container{
+    display: flex;
+    gap: 5px;
+    margin: 8px auto;
+    justify-self: center;
+  }
+
+  .task-item{
+    display: block;
   }
 }

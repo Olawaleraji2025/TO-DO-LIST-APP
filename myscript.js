@@ -341,10 +341,12 @@ function renderTasks(tasks) {
     taskElement.setAttribute("data-category", task.category);
 
     taskElement.innerHTML = `
+    <div class="tasks-text-container">
       <input type="checkbox" class="task-checkbox" ${task.completed ? 'checked' : ''}>
       <span class="task-text ${task.completed ? 'completed' : ''}">${task.text}</span>
       <span class="task-priority priority-${task.priority}">${task.priority}</span>
       <span class="task-category">${task.category}</span>
+      </div>
       <div class="edit-container">
       <button class="edit-btn">Edit</button>
       <button class="delete-btn">Delete</button>

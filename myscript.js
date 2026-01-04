@@ -262,9 +262,12 @@ const sampleTasks = [
 document.addEventListener("DOMContentLoaded", () => {
   // localStorage.setItem("tasks" ,JSON.stringify(sampleTasks))
   // Initialize localStorage with sampleTasks if empty
+ 
+
   if (!localStorage.getItem("tasks")) {
     localStorage.setItem("tasks", JSON.stringify(sampleTasks));
   }
+
   setupEventListeners();
 });
 
@@ -358,8 +361,6 @@ function renderTasks(tasks) {
 
 }
 
-
-
 // This is the format in which new tasks will be sent
 function addTask() {
   const tasks = getTask();
@@ -380,14 +381,10 @@ if(taskInput.value === "")
       saveTask(tasks);
       taskInput.value = "";
   
-      renderTasks(tasks);
+      loadTasks();
 
 }
   
-
-
-
-
 // This function is for deleting tasks
 function deleteTask(taskId) {
   const tasks = getTask();
@@ -410,14 +407,19 @@ function toggleTask(taskId) {
 // This function will Display tasks based on their categories
 function loadTasks() {
   const tasks = getTask();
-
+  
   let filteredTasks = tasks;
   if (currentFilter === "active") {
     filteredTasks = tasks.filter(task => !task.completed);
   } else if (currentFilter === "completed") {
     filteredTasks = tasks.filter(task => task.completed);
   }
-
+  
+  if (filteredTasks.length === 0) {
+    emptyState.style.display = "block";
+  } else {
+    emptyState.style.display = "none";
+  }
   renderTasks(filteredTasks);
   // console.log(filteredTasks);
 

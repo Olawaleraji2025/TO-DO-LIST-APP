@@ -1,4 +1,10 @@
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 
 .page-bg {
   background-color: #f9fafb;
@@ -121,19 +127,11 @@
   border: none;
 }
 
-.filter-btn:hover:not(.active) {
-  background-color: #f3f4f6;
-}
 
 /* Task count */
 .task-count {
   font-size: 0.875rem;
   color: #6b7280;
-}
-
-/* Task list */
-.task-list > * + * {
-  border-top: 1px solid #e5e7eb;
 }
 
 /* Empty state */
@@ -443,7 +441,7 @@
   /* Task Item Responsiveness */
 
   .edit-container{
-    margin: 8px auto;
+    margin-left: auto;
   }
 
 
@@ -484,7 +482,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 515px) {
   .header h1 {
     font-size: 1.125rem;
   }

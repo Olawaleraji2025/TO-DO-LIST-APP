@@ -427,7 +427,7 @@ function loadTasks() {
   taskCount.textContent = filteredTasks.length;
 }
 
-// Edit task text
+// Edit task text functionality
 function editTask(taskId, newText) {
   const tasks = getTask();
   const task = tasks.find(task => task.id === taskId);

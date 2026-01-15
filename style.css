@@ -29,7 +29,7 @@
 
 /* Header */
 .header {
-  background-color: hsl(243, 75%, 59%);
+  background-color: rgb(80, 72, 229);
   padding: 1.5rem;
   text-align: center;
 }
@@ -153,7 +153,7 @@
   margin-top: 0.5rem;
 }
 
-/* Redesigned Task Item Styles */
+/* Task Item Styles */
 .task-item {
   display: flex;
   align-items: center;
@@ -168,17 +168,6 @@
   overflow: hidden;
 }
 
-/* .task-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: linear-gradient(to bottom, #4f46e5, #7c3aed);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-} */
 
 .task-item:hover {
   transform: translateY(-2px);
@@ -268,7 +257,7 @@
   box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
 }
 
-/* Category Badge */
+/* Category style */
 .task-category {
   font-size: 0.75rem;
   font-weight: 500;
@@ -475,6 +464,10 @@
     font-size: 0.8rem;
     margin-left: 0.25rem;
     flex-shrink: 0;
+  }
+
+  .tasks-text-container{
+gap: 0;
   }
 }
 

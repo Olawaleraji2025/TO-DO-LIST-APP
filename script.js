@@ -1,3 +1,6 @@
+"use-strict"
+
+
 // DOM Elements
 const taskForm = document.getElementById("addTaskForm");
 const taskInput = document.getElementById("taskInput");
@@ -284,7 +287,6 @@ function setupEventListeners() {
   // This will run whenever a target is clicked on in the taskList element
   taskList.addEventListener("click", (e) => {
     const taskElement = e.target.closest(".task-item");
-    // console.log(taskElement);
     
     if (!taskElement) return;
 
@@ -421,7 +423,6 @@ function loadTasks() {
     emptyState.style.display = "none";
   }
   renderTasks(filteredTasks);
-  // console.log(filteredTasks);
 
   // this is to Update task count
   taskCount.textContent = filteredTasks.length;

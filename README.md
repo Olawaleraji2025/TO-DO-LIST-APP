@@ -20,3 +20,4 @@ Hey there! Welcome to the **Todo List Application** – your friendly companion 
 - CSS3: For styling, including gradients, animations, and responsive layouts.
 - JavaScript: For all the interactive magic – no frameworks, just pure JS goodness.
 
+Here is the live project: https://to-do-list-008.netlify.app
